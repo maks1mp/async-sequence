@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            font-family: sans-serif;
+        }
+
+        #root:not(:empty) {
+            box-shadow: 0 0 7px 0;
+            padding: 20px;
+            max-width: 50%;
+        }
+
+        #root:empty::before { 
+            font-size: 24px;
+            content: 'Loading...';
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="./js/generators.js" type="module"></script>
+</body>
+</html>
